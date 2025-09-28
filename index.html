@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunique-se com a Liga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #1a1a2e; /* Azul escuro, como o céu noturno de uma cidade */
+            color: #1d1c1c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background: #1c0891; /* Azul mais claro para o contraste */
+            border: 5px solid #000000; /* Vermelho vibrante como cor de destaque */
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 550px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0);
+            }
+            0% {
+                transform: scale(0);
+            }
+            0% {
+                transform: scale(1);
+            }
+        }
+
+        .container:hover {
+            transform: scale(1);
+        }
+
+        h2 {
+            font-family: 'Bangers', cursive; /* Fonte que imita o estilo de HQ */
+            font-size: 3em;
+            color: #13e200;
+            text-shadow: 2px 2px 0 #000000; /* Sombra para dar destaque */
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        label {
+            font-family: 'Press Start 2P', cursive; /* Fonte para dar um ar de videogame antigo/pixelado, misturando estilos de heróis */
+            font-size: 0.9em;
+            display: block;
+            margin-bottom: 8px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        input, textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 3px solid #000000;
+            border-radius: 8px;
+            background: #f0f0f0;
+            color: #000000;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #028d0e; /* Borda vermelha quando focado */
+            box-shadow: 0 0 10px rgba(2, 197, 12, 0.5);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #000000;
+            color: #05e418;
+            border: 3px solid #000000;
+            border-radius: 10px;
+            font-size: 1.5em;
+            font-family: 'Bangers', cursive;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #000000;
+            color: #af0909;
+            border-color: #030303;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Alguma Duvidada?</h2>
+    <form action="https://formspree.io/f/mgvlwygr" method="POST">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Ex: Nome" required>
+
+        <label for="email">E-meil</label>
+        <input type="email" id="email" name="email" placeholder="Ex: heroi@universo.com" required>
+
+        <label for="assunto">Sobre o que é sua Pergunta?</label>
+        <input type="text" id="assunto" name="assunto" placeholder="Ex: Tema!" required>
+
+        <label for="mensagem">Detalhes da Questão</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Descreva sua Pergunta..."></textarea>
+
+        <button type="submit">Enviar S.O.S</button>
+    </form>
+</div>
+
+</body>
+</html>
